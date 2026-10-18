@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.header {
+    background: #0b0b0b;
+    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.nav a:hover {
+    color: #e00000;
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 3px solid #e00000;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0b0b0b 0%,
+            #0b0b0b 45%,
+            #181818 100%
+        );
+}
+
+.hero-content {
+    padding: 100px 0;
+}
+
+.hero-text {
+    max-width: 750px;
+}
+
+.etiqueta {
+    color: #e00000;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1;
+    margin: 25px 0 30px;
+}
+
+.hero h1 span {
+    color: #e00000;
+    display: block;
+}
+
+.hero p {
+    color: #aaaaaa;
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 620px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.boton {
+    display: inline-block;
+
+    background: #e00000;
+    color: #ffffff;
+
+    padding: 15px 28px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    border: 2px solid #e00000;
+
+    transition: 0.2s ease;
+}
+
+.boton:hover {
+    background: transparent;
+    color: #e00000;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.productos {
+    padding: 110px 0;
+    border-bottom: 1px solid #292929;
+}
+
+.section-header {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.section-header h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin: 18px 0;
+}
+
+.section-header p {
+    color: #888888;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.producto {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+    border-color: #e00000;
+    box-shadow: 0 10px 30px rgba(224, 0, 0, 0.15);
+}
+
+.producto-imagen {
+    height: 220px;
+    background: #202020;
+    overflow: hidden;
+    border-bottom: 3px solid #e00000;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-info {
+    padding: 25px;
+}
+
+.producto-info h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.producto-info p {
+    color: #888888;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NOSOTROS
+========================= */
+
+.nosotros {
+    padding: 110px 0;
+    border-bottom: 1px solid #292929;
+}
+
+.nosotros-content {
+    display: block;
+}
+
+.nosotros-text h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.1;
+    margin: 20px 0 30px;
+}
+
+.nosotros-text p {
+    color: #999999;
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 18px;
+    max-width: 550px;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    padding: 110px 0;
+    background: #111111;
+    border-bottom: 3px solid #e00000;
+}
+
+.contacto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.contacto-text h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.contacto-text p {
+    color: #999999;
+    line-height: 1.7;
+    font-size: 17px;
+    max-width: 550px;
+}
+
+.contacto-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto-item {
+    background: #191919;
+    border: 1px solid #292929;
+    border-left: 4px solid #e00000;
+    border-radius: 8px;
+    padding: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.contacto-item:hover {
+    border-color: #e00000;
+    color: #e00000;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    border-top: 1px solid #292929;
+    padding: 30px 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .nav {
+        gap: 15px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 88%;
+    }
+
+    .header-content {
+        min-height: 70px;
+    }
+
+    .brand img {
+        width: 105px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .productos {
+        padding: 80px 0;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-imagen {
+        height: 200px;
+    }
+
+    .nosotros {
+        padding: 80px 0;
+    }
+
+    .contacto {
+        padding: 80px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
